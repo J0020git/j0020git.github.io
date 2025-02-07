@@ -1,11 +1,68 @@
+html {
+    font-size: 16px;
+}
+
 body {
     margin: 0;
     background-color: #1A1A1A;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
+    font-family: 'Inter';
+}
+
+#root {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1180px;
 }
 
 #logo {
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
+}
+
+#profile-picture {
+    width: 23.75rem;
+    height: 23.75rem;
+    border-radius: 11.875rem;
+}
+
+h1,
+h2,
+p,
+li {
+    margin: 0;
+}
+
+h1 {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    color: transparent;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #61DAFB, #F58EA1, #F6C28B);
+    background-clip: text;
+    display: inline-block;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+}
+
+p,
+li {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: #FFFFFF;
+    font-weight: normal;
+}
+
+.text-small {
+    font-size: 1rem;
+    line-height: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: normal;
 }
