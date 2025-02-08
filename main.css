@@ -43,7 +43,9 @@ body {
     width: 580px;
 }
 
-#socials {
+#socials,
+#technologies-lists,
+#project-tiles {
     display: flex;
     flex-direction: row;
     gap: 1.25rem;
@@ -57,10 +59,7 @@ body {
 }
 
 #technologies-lists {
-    display: flex;
-    flex-direction: row;
     width: 55rem;
-    gap: 1.25rem;
 }
 
 #technologies-lists>ul {
@@ -69,6 +68,27 @@ body {
 
 #technologies-lists>ul>li {
     line-height: 3rem;
+}
+
+.project-tile {
+    height: 23.75rem;
+    width: 23.75rem;
+    background-color: #333333;
+    border-radius: 0.5rem;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.project-tile>h2 {
+    color: #FFFFFF;
+}
+
+.project-tile>h2+p {
+    color: rgba(255, 255, 255, 0.5);
+    flex: 1;
 }
 
 h1,
@@ -81,13 +101,12 @@ ul {
 
 h1 {
     font-size: 4.5rem;
-    line-height: 4.5rem;
     color: transparent;
     font-weight: bold;
     background-image: linear-gradient(to right, #61DAFB, #F58EA1, #F6C28B);
     background-clip: text;
-    display: inline-block;
     align-self: start;
+    overflow: visible;
 }
 
 h2 {
