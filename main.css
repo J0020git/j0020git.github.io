@@ -56,10 +56,26 @@ body {
     margin-bottom: 5rem;
 }
 
+#technologies-lists {
+    display: flex;
+    flex-direction: row;
+    width: 55rem;
+    gap: 1.25rem;
+}
+
+#technologies-lists>ul {
+    flex: 1;
+}
+
+#technologies-lists>ul>li {
+    line-height: 3rem;
+}
+
 h1,
 h2,
 p,
-li {
+li,
+ul {
     margin: 0;
 }
 
