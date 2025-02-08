@@ -2,6 +2,10 @@ html {
     font-size: 16px;
 }
 
+nav {
+    height: 0px;
+}
+
 body {
     margin: 0;
     background-color: #1A1A1A;
@@ -11,8 +15,7 @@ body {
 }
 
 #root {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 0 auto;
     width: 100%;
     max-width: 1180px;
 }
@@ -22,10 +25,35 @@ body {
     height: 3rem;
 }
 
+#profile {
+    position: relative;
+    height: 100vh;
+    justify-content: center;
+}
+
 #profile-picture {
     width: 23.75rem;
     height: 23.75rem;
     border-radius: 11.875rem;
+    position: absolute;
+    right: 0px;
+}
+
+#profile-blurb {
+    width: 580px;
+}
+
+#socials {
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+}
+
+#about,
+#technologies,
+#projects {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 h1,
@@ -43,6 +71,7 @@ h1 {
     background-image: linear-gradient(to right, #61DAFB, #F58EA1, #F6C28B);
     background-clip: text;
     display: inline-block;
+    align-self: start;
 }
 
 h2 {
@@ -58,6 +87,12 @@ li {
     line-height: 1.5rem;
     color: #FFFFFF;
     font-weight: normal;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
 }
 
 .text-small {
