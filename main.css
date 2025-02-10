@@ -56,6 +56,7 @@ body {
 #projects {
     margin-top: 5rem;
     margin-bottom: 5rem;
+    position: relative;
 }
 
 #technologies-lists {
@@ -68,6 +69,45 @@ body {
 
 #technologies-lists>ul>li {
     line-height: 3rem;
+}
+
+#technologies-tile-1,
+#technologies-tile-2,
+#technologies-tile-3 {
+    height: 5rem;
+    width: 5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #333333;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    position: absolute;
+}
+
+#technologies-tile-1 {
+    border-color: #61DAFB;
+    top: 50%;
+    right: 12.5rem;
+    translate: 0% -50%;
+}
+
+#technologies-tile-2 {
+    border-color: #F58EA1;
+    top: 0;
+    right: 6.25rem;
+}
+
+#technologies-tile-3 {
+    border-color: #F6C28B;
+    bottom: 0;
+    right: 0;
+}
+
+.technologies-tile-img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 
 .project-tile {
