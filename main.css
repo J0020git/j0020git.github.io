@@ -4,6 +4,8 @@ html {
 
 nav {
     height: 0px;
+    position: sticky;
+    top: 0;
 }
 
 body {
@@ -23,10 +25,14 @@ body {
 #logo {
     width: 3rem;
     height: 3rem;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
 }
 
 #profile {
     position: relative;
+    min-height: 47.5rem;
     height: 100vh;
     justify-content: center;
 }
@@ -40,7 +46,7 @@ body {
 }
 
 #profile-blurb {
-    width: 580px;
+    width: 36.25rem;
 }
 
 #socials,
@@ -48,6 +54,7 @@ body {
 #project-tiles {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 1.25rem;
 }
 
@@ -180,4 +187,36 @@ li {
 .icon {
     height: 2.5rem;
     width: 2.5rem;
+}
+
+@media (max-width: 1404px) {
+    nav {
+        display: none;
+    }
+}
+
+@media (max-width: 1280px) {
+    #root {
+        max-width: 880px;
+    }
+
+    #profile-picture {
+        position: static;
+        margin: 0 auto;
+    }
+
+    #profile-blurb {
+        width: 100%;
+    }
+
+    #technologies-tile-1,
+    #technologies-tile-2,
+    #technologies-tile-3 {
+        display: none;
+    }
+
+    .project-tile {
+        height: 26.875rem;
+        width: 26.875rem;
+    }
 }
