@@ -49,9 +49,14 @@ body {
     width: 36.25rem;
 }
 
-#socials,
-#technologies-lists,
 #project-tiles {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#socials,
+#technologies-lists {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -118,8 +123,7 @@ body {
 }
 
 .project-tile {
-    height: 23.75rem;
-    width: 23.75rem;
+    aspect-ratio: 1 / 1;
     background-color: #333333;
     border-radius: 0.5rem;
     padding: 2.5rem;
@@ -127,6 +131,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
+    overflow: hidden;
 }
 
 .project-tile>h2 {
@@ -136,6 +141,7 @@ body {
 .project-tile>h2+p {
     color: rgba(255, 255, 255, 0.5);
     flex: 1;
+    overflow: hidden;
 }
 
 h1,
@@ -215,8 +221,17 @@ li {
         display: none;
     }
 
-    .project-tile {
-        height: 26.875rem;
-        width: 26.875rem;
+    #project-tiles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1080px) {
+    html {
+        font-size: 12px;
+    }
+
+    #project-tiles {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
