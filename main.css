@@ -18,6 +18,19 @@ body {
     font-family: 'Inter';
 }
 
+ul {
+    padding-left: 2rem;
+    list-style: none;
+}
+
+li::before {
+    font-size: 1rem;
+    color: #61DAFB;
+    content: "◆";
+    position: absolute;
+    margin-left: -1.5rem;
+}
+
 #root {
     margin: 0 auto 0 auto;
     width: 100%;
@@ -69,7 +82,7 @@ body {
 
 #technologies-lists {
     display: grid;
-    gap: 1.25rem;
+    gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
 }
 
@@ -83,6 +96,10 @@ body {
 
 #technologies-lists>ul>li {
     line-height: 3rem;
+}
+
+#li-short {
+    display: none;
 }
 
 #technologies-tile-1,
@@ -277,5 +294,13 @@ li {
 @media (max-width: 576px) {
     .project-tile>h2+p {
         visibility: hidden;
+    }
+
+    #li-long {
+        display: none;
+    }
+
+    #li-short {
+        display: list-item;
     }
 }
