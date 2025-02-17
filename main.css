@@ -20,6 +20,9 @@ body {
     margin: 0 auto 0 auto;
     width: 100%;
     max-width: 1180px;
+    box-sizing: border-box;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
 }
 
 #logo {
@@ -74,10 +77,6 @@ body {
     margin-top: 5rem;
     margin-bottom: 5rem;
     position: relative;
-}
-
-#technologies-lists>ul {
-    flex: 1;
 }
 
 #technologies-lists>ul>li {
@@ -203,9 +202,9 @@ li {
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1200px) {
     #root {
-        max-width: 880px;
+        max-width: 100%;
     }
 
     #profile-picture {
@@ -232,45 +231,19 @@ li {
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
     html {
         font-size: 12px;
     }
 
-    #root {
-        max-width: 800px;
+    #profile>* {
+        width: calc(100% - 23.75rem - 2.5rem);
     }
 
     #profile-picture {
         position: absolute;
         right: 0px;
-    }
-
-    #profile-blurb {
-        width: 36.25rem;
-    }
-
-    #project-tiles {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 880px) {
-    #root {
-        max-width: 600px;
-    }
-
-    #profile-picture {
-        position: static;
-        margin: 0 auto;
-    }
-
-    #profile-blurb {
-        width: 100%;
-    }
-
-    #project-tiles {
-        grid-template-columns: repeat(2, 1fr);
+        width: 23.75rem;
     }
 }
 
@@ -279,10 +252,27 @@ li {
         font-size: 10px;
     }
 
-    #root {
-        max-width: 425px;
+    h1 {
+        font-size: 4rem;
     }
 
+    #profile {
+        height: auto;
+        padding-top: 2.5rem;
+    }
+
+    #profile>* {
+        width: 100%;
+    }
+
+    #profile-picture {
+        position: static;
+        margin: 0 auto;
+        width: 23.75rem;
+    }
+}
+
+@media (max-width: 576px) {
     .project-tile>h2+p {
         visibility: hidden;
     }
