@@ -1,3 +1,14 @@
+:root {
+    --blue: #61DAFB;
+    --pink: #F58EA1;
+    --peach: #F6C28B;
+    --dark: #1A1A1A;
+    --grey: #333333;
+    --light: #FFFFFF;
+    --translucent: rgba(255, 255, 255, 0.5);
+    --gradient: linear-gradient(to right, var(--blue), var(--pink), var(--peach));
+}
+
 html {
     font-size: 16px;
 }
@@ -12,7 +23,7 @@ nav {
 
 body {
     margin: 0;
-    background-color: #1A1A1A;
+    background-color: var(--dark);
     height: 100%;
     width: 100%;
     font-family: 'Inter';
@@ -25,7 +36,7 @@ ul {
 
 li::before {
     font-size: 1rem;
-    color: #61DAFB;
+    color: var(--blue);
     content: "◆";
     position: absolute;
     margin-left: -1.5rem;
@@ -109,7 +120,7 @@ li::before {
     width: 5rem;
     padding: 0.5rem;
     border-radius: 0.5rem;
-    background-color: #333333;
+    background-color: var(--grey);
     box-sizing: border-box;
     border-width: 2px;
     border-style: solid;
@@ -117,20 +128,20 @@ li::before {
 }
 
 #technologies-tile-1 {
-    border-color: #61DAFB;
+    border-color: var(--blue);
     top: 50%;
     right: 12.5rem;
     translate: 0% -50%;
 }
 
 #technologies-tile-2 {
-    border-color: #F58EA1;
+    border-color: var(--pink);
     top: 0;
     right: 6.25rem;
 }
 
 #technologies-tile-3 {
-    border-color: #F6C28B;
+    border-color: var(--peach);
     bottom: 0;
     right: 0;
 }
@@ -143,7 +154,7 @@ li::before {
 
 .project-tile {
     aspect-ratio: 1 / 1;
-    background-color: #333333;
+    background-color: var(--grey);
     border-radius: 0.5rem;
     padding: 2.5rem;
     box-sizing: border-box;
@@ -154,11 +165,11 @@ li::before {
 }
 
 .project-tile>h2 {
-    color: #FFFFFF;
+    color: var(--light);
 }
 
 .project-tile>h2+p {
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--translucent);
     flex: 1;
     overflow: hidden;
 }
@@ -175,7 +186,7 @@ h1 {
     font-size: 4.5rem;
     color: transparent;
     font-weight: bold;
-    background-image: linear-gradient(to right, #61DAFB, #F58EA1, #F6C28B);
+    background-image: var(--gradient);
     background-clip: text;
     align-self: start;
     overflow: visible;
@@ -184,7 +195,7 @@ h1 {
 h2 {
     font-size: 2rem;
     line-height: 2rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--translucent);
     font-weight: bold;
 }
 
@@ -192,7 +203,7 @@ p,
 li {
     font-size: 1.5rem;
     line-height: 1.5rem;
-    color: #FFFFFF;
+    color: var(--light);
     font-weight: normal;
 }
 
@@ -205,14 +216,20 @@ li {
 .text-small {
     font-size: 1rem;
     line-height: 1rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--translucent);
     font-weight: normal;
 }
 
 .icon {
     height: 2.5rem;
     width: 2.5rem;
-    color: #FFFFFF;
+    color: var(--light);
+    transition: all 0.2s;
+}
+
+.icon:hover {
+    transform: translateY(-4px);
+    color: var(--blue);
 }
 
 @media (max-width: 1404px) {
