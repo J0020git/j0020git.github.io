@@ -2,30 +2,35 @@
 @keyframes appearBottom {
     from {
         opacity: 0%;
-        transform: translateY(10rem)
+    }
+
+    1% {
+        transform: translateY(10rem);
     }
 
     to {
         opacity: 100%;
-        transform: translateY(0px)
+        transform: translateY(0px);
     }
+
 }
 
 /* Animation utility classes */
 @media (prefers-reduced-motion: no-preference) {
     .animate {
         animation-duration: 0.7s;
-        animation-fill-mode: both;
+        animation-play-state: paused;
     }
 
     .appearBottom {
-        opacity: 0%;
-    }
-
-    .appearBottom.viewed {
         animation-name: appearBottom;
         animation-timing-function: ease-in-out;
     }
+
+    .viewed {
+        animation-play-state: running;
+    }
+
 }
 
 /* CSS Variables */
@@ -111,6 +116,7 @@ li::before {
     box-sizing: border-box;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+    padding-bottom: 5rem;
 }
 
 #logo {
@@ -193,7 +199,7 @@ li::before {
 #technologies-tile-1:hover,
 #technologies-tile-2:hover,
 #technologies-tile-3:hover {
-    transform: rotateY(360deg)
+    transform: rotateY(360deg);
 }
 
 #technologies-tile-1 {
@@ -333,9 +339,12 @@ li::before {
         font-size: 4rem;
     }
 
+    #root {
+        padding-top: 2.5rem;
+    }
+
     #profile {
         height: auto;
-        padding-top: 2.5rem;
     }
 
     #profile>* {
