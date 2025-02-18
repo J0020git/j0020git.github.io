@@ -1,3 +1,19 @@
+@keyframes appearBottom {
+    from {
+        opacity: 0%;
+        transform: translateY(10rem)
+    }
+
+    to {
+        opacity: 100%;
+        transform: translateY(0px)
+    }
+}
+
+.appearBottom {
+    animation: appearBottom linear 0.5s both;
+}
+
 :root {
     --blue: #61DAFB;
     --pink: #F58EA1;
