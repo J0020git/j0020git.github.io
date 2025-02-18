@@ -187,6 +187,13 @@ li::before {
     border-width: 2px;
     border-style: solid;
     position: absolute;
+    transition: all 1s linear;
+}
+
+#technologies-tile-1:hover,
+#technologies-tile-2:hover,
+#technologies-tile-3:hover {
+    transform: rotateY(360deg)
 }
 
 #technologies-tile-1 {
