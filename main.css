@@ -1,3 +1,4 @@
+/* Animations */
 @keyframes appearBottom {
     from {
         opacity: 0%;
@@ -10,8 +11,7 @@
     }
 }
 
-/* TODO: animate, and other animation utility classes */
-
+/* Animation utility classes */
 .animate {
     animation-duration: 0.7s;
     animation-fill-mode: both;
@@ -19,7 +19,6 @@
 
 .appearBottom {
     opacity: 0%;
-    transform: translateY(10rem);
 }
 
 .appearBottom.viewed {
@@ -27,7 +26,7 @@
     animation-timing-function: ease-in-out;
 }
 
-
+/* CSS Variables */
 :root {
     --blue: #61DAFB;
     --pink: #F58EA1;
@@ -57,6 +56,37 @@ body {
     height: 100%;
     width: 100%;
     font-family: 'Inter';
+}
+
+h1,
+h2,
+p,
+li,
+ul {
+    margin: 0;
+}
+
+h1 {
+    font-size: 4.5rem;
+    color: transparent;
+    font-weight: bold;
+    background-image: var(--gradient);
+    background-clip: text;
+    align-self: start;
+    overflow: visible;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--translucent);
+    font-weight: bold;
+}
+
+p,
+li {
+    font-size: 1.5rem;
+    color: var(--light);
+    font-weight: normal;
 }
 
 ul {
@@ -205,37 +235,6 @@ li::before {
     overflow: hidden;
 }
 
-h1,
-h2,
-p,
-li,
-ul {
-    margin: 0;
-}
-
-h1 {
-    font-size: 4.5rem;
-    color: transparent;
-    font-weight: bold;
-    background-image: var(--gradient);
-    background-clip: text;
-    align-self: start;
-    overflow: visible;
-}
-
-h2 {
-    font-size: 2rem;
-    color: var(--translucent);
-    font-weight: bold;
-}
-
-p,
-li {
-    font-size: 1.5rem;
-    color: var(--light);
-    font-weight: normal;
-}
-
 .container {
     display: flex;
     flex-direction: column;
@@ -260,6 +259,7 @@ li {
     color: var(--blue);
 }
 
+/* Responsiveness media queries */
 @media (max-width: 1404px) {
     nav {
         display: none;
