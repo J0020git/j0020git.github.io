@@ -12,18 +12,20 @@
 }
 
 /* Animation utility classes */
-.animate {
-    animation-duration: 0.7s;
-    animation-fill-mode: both;
-}
+@media (prefers-reduced-motion: no-preference) {
+    .animate {
+        animation-duration: 0.7s;
+        animation-fill-mode: both;
+    }
 
-.appearBottom {
-    opacity: 0%;
-}
+    .appearBottom {
+        opacity: 0%;
+    }
 
-.appearBottom.viewed {
-    animation-name: appearBottom;
-    animation-timing-function: ease-in-out;
+    .appearBottom.viewed {
+        animation-name: appearBottom;
+        animation-timing-function: ease-in-out;
+    }
 }
 
 /* CSS Variables */
