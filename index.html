@@ -8,6 +8,7 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
     </style>
+    <script src="animateOnScroll.js"></script>
   </head>
   <body>
     <nav>
@@ -15,16 +16,21 @@
     </nav>
     <div id="root">
       <div id="profile" class="container">
-        <h2>Hello, my name is</h2>
-        <h1>Jerome Hernandez</h1>
-        <h2>I'm a Computer Science Graduate</h2>
-        <img src="images/Profile Picture.png" alt="" id="profile-picture" />
-        <p id="profile-blurb">
+        <h2 class="animate appearBottom">Hello, my name is</h2>
+        <h1 class="animate appearBottom">Jerome Hernandez</h1>
+        <h2 class="animate appearBottom">I'm a Computer Science Graduate</h2>
+        <img
+          src="images/Profile Picture.png"
+          alt=""
+          id="profile-picture"
+          class="animate appearBottom"
+        />
+        <p id="profile-blurb" class="animate appearBottom">
           My passion lies in software development, with a particular interest in
           full-stack web and mobile development. I'm eager to launch my career
           while continuously learning and improving my skills.
         </p>
-        <div id="socials">
+        <div id="socials" class="animate appearBottom">
           <a href="mailto:rjeromeh@outlook.com">
             <svg class="icon">
               <use xlink:href="images/bootstrap-icons.svg#envelope-fill"></use>
@@ -43,30 +49,30 @@
         </div>
       </div>
       <div id="about" class="container">
-        <h1>About Me</h1>
-        <p>
+        <h1 class="animate appearBottom">About Me</h1>
+        <p class="animate appearBottom">
           I'm a recent Computer Science Graduate from UNSW, Sydney, eager to
           start my career in tech. Through both academic studies and personal
           projects, I've strengthened my analytical thinking, problem-solving
           skills, and my ability to communicate and collaborate effectively in a
           team.
         </p>
-        <p>
+        <p class="animate appearBottom">
           My primary interests are in full-stack web and mobile development,
           where I enjoy designing, implementing and testing user-friendly,
           high-performance applications. Currently, I'm deepening my expertise
           in React and React Native and enhancing my skills in API development
           and real-time communication with Express.js.
         </p>
-        <p>
+        <p class="animate appearBottom">
           Passionate about continuous learning, I'm actively seeking
           opportunities where I can contribute my skills, grow as a developer,
           and make an impact in a dynamic team environment.
         </p>
       </div>
       <div id="technologies" class="container">
-        <h2>Technologies I've worked with</h2>
-        <div id="technologies-lists">
+        <h2 class="animate appearBottom">Technologies I've worked with</h2>
+        <div id="technologies-lists" class="animate appearBottom">
           <ul>
             <li>JavaScript</li>
             <li>HTML/CSS</li>
@@ -87,20 +93,20 @@
             <li>Confluence</li>
           </ul>
         </div>
-        <div id="technologies-tile-1">
+        <div id="technologies-tile-1" class="animate appearBottom">
           <img src="images/react.png" alt="" class="technologies-tile-img" />
         </div>
-        <div id="technologies-tile-2">
+        <div id="technologies-tile-2" class="animate appearBottom">
           <img src="images/figma.png" alt="" class="technologies-tile-img" />
         </div>
-        <div id="technologies-tile-3">
+        <div id="technologies-tile-3" class="animate appearBottom">
           <img src="images/js.png" alt="" class="technologies-tile-img" />
         </div>
       </div>
       <div id="projects" class="container">
-        <h1>Projects</h1>
+        <h1 class="animate appearBottom">Projects</h1>
         <div id="project-tiles">
-          <div class="project-tile">
+          <div class="project-tile animate appearBottom">
             <a href="https://github.com/J0020git/personal-website">
               <svg class="icon">
                 <use xlink:href="images/bootstrap-icons.svg#github"></use>
@@ -110,7 +116,7 @@
             <p>This personal website!</p>
             <p class="text-small">HTML, CSS</p>
           </div>
-          <div class="project-tile">
+          <div class="project-tile animate appearBottom">
             <a href="https://github.com/J0020git/musikl-game">
               <svg class="icon">
                 <use xlink:href="images/bootstrap-icons.svg#github"></use>
@@ -123,7 +129,7 @@
             </p>
             <p class="text-small">JavaScript, React, Material-UI</p>
           </div>
-          <div class="project-tile">
+          <div class="project-tile animate appearBottom">
             <a href="https://github.com/J0020git/notion-parse">
               <svg class="icon">
                 <use xlink:href="images/bootstrap-icons.svg#github"></use>

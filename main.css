@@ -10,12 +10,23 @@
     }
 }
 
-.appearBottom {
-    animation: appearBottom linear both;
-    animation-timeline: view();
-    animation-range-start: contain 0%;
-    animation-range-end: contain 50%;
+/* TODO: animate, and other animation utility classes */
+
+.animate {
+    animation-duration: 0.7s;
+    animation-fill-mode: both;
 }
+
+.appearBottom {
+    opacity: 0%;
+    transform: translateY(10rem);
+}
+
+.appearBottom.viewed {
+    animation-name: appearBottom;
+    animation-timing-function: ease-in-out;
+}
+
 
 :root {
     --blue: #61DAFB;
