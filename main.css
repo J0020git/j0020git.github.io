@@ -190,7 +190,7 @@ li::before {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1rem;
     overflow: hidden;
 }
 
@@ -200,6 +200,7 @@ li::before {
 
 .project-tile>h2+p {
     color: var(--translucent);
+    font-size: 1rem;
     flex: 1;
     overflow: hidden;
 }
@@ -224,7 +225,6 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    line-height: 2rem;
     color: var(--translucent);
     font-weight: bold;
 }
@@ -232,7 +232,6 @@ h2 {
 p,
 li {
     font-size: 1.5rem;
-    line-height: 1.5rem;
     color: var(--light);
     font-weight: normal;
 }
@@ -245,7 +244,6 @@ li {
 
 .text-small {
     font-size: 1rem;
-    line-height: 1rem;
     color: var(--translucent);
     font-weight: normal;
 }
@@ -295,11 +293,15 @@ li {
     #project-tiles {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .project-tile>h2+p {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 992px) {
     html {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     #profile>* {
@@ -315,7 +317,7 @@ li {
 
 @media (max-width: 768px) {
     html {
-        font-size: 10px;
+        font-size: 11px;
     }
 
     h1 {
@@ -336,9 +338,21 @@ li {
         margin: 0 auto;
         width: 23.75rem;
     }
+
+    .project-tile>h2+p {
+        font-size: 1.25rem;
+    }
 }
 
 @media (max-width: 576px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
     .project-tile>h2+p {
         visibility: hidden;
     }
@@ -349,5 +363,9 @@ li {
 
     #li-short {
         display: list-item;
+    }
+
+    .project-tile {
+        gap: 0;
     }
 }
