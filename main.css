@@ -11,7 +11,10 @@
 }
 
 .appearBottom {
-    animation: appearBottom linear 0.5s both;
+    animation: appearBottom linear both;
+    animation-timeline: view();
+    animation-range-start: contain 0%;
+    animation-range-end: contain 50%;
 }
 
 :root {
